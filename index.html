@@ -182,49 +182,42 @@
                 <aside class="sidebar">
                   <h2 class="section-title">Tags</h2>
                   <ul class="list tags">
-                    <li><a href="#tag-design">design</a> <span>(6)</span></li>
-                    <li><a href="#tag-code">code</a> <span>(5)</span></li>
-                    <li><a href="#tag-tutorials">tutorials</a> <span>(4)</span></li>
-                    <li><a href="#tag-reviews">reviews</a> <span>(4)</span></li>
-                    <li><a href="#tag-news">news</a> <span>(6)</span></li>
-                    <li><a href="#tag-George">George</a> <span>(1)</span></li>
-                    <li><a href="#tag-Tuxedo">Tuxedo</a> <span>(1)</span></li>
-                    <li><a href="#tag-Kitty">Kitty</a> <span>(1)</span></li>
-                    <li><a href="#tag-Toebean">Toebean</a> <span>(1)</span></li>
-                    <li><a href="#tag-Theo">Theo</a> <span>(1)</span><li>
-                    <li><a href="#tag-Tabby">Tabby</a> <span>(1)</span></li>
-                    <li><a href="#tag-Marion">Marion</a> <span>(1)</span></li>
-                    <li><a href="#tag-Berry">Berry</a> <span>(1)</span></li>
-                    <li><a href="#tag-article-1">article-1</a> <span>(1)</span></li>
-                    <li><a href="#tag-article-10">article-10</a> <span>(1)</span></li>
+
                   </ul>
                   <h2 class="section-title">Authors</h2>
                   <ul class="list authors">
-                    <li>
-                        <a href="#author-Kitty Toebean">
-                        <span class="author-name">Kitty Toebean</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#author-Theo Tabby">
-                        <span class="author-name">Theo Tabby</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#author-George Tuxedo">
-                        <span class="author-name">George Tuxedo</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#author-Marion Berry">
-                        <span class="author-name">Marion Berry</span>
-                      </a>
-                    </li>
+
                   </ul>
                 </aside>
               </main>
             </div>
         </div>
         <script src="js/script.js"></script>
-    </body>
+        <script id="template-article-link" type="text/x-handlebars-template">
+          <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+        </script>
+
+        <script id="template-tag-link" type="text/x-handlebars-template">
+          <li><a href="#tag-{{ id }}"><span>{{ title }}</span></a></li>
+        </script>
+
+        <script id="template-author-link" type="text/x-handlebars-template">
+          <li><a href="#author-{{ id }}"><span>{{ title }}</span></a></li>
+        </script>
+
+        <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+          {{#each tags}}
+          <li><a class="{{className}}" href="#tag-{{ tag }}">{{ tag }}</a></li>
+          {{/each}}
+        </script>
+
+        <script id="template-author-right-link" type="text/x-handlebars-template">
+          {{#each authors}}
+          <li><a class="{{ className }}" href="#author-{{author}}">{{author}}</a> {{count}}</li>
+          {{/each}}
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+        <script src="js/script.js"></script>
+  </body>
 </html>

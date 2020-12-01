@@ -102,9 +102,40 @@ body {
 .post-tags {
   display: -ms-flexbox;
   display: flex;
+  content: nbsp;
 }
 
 .post-tags p {
-  margin: 0 10px 0 0;
+  margin: 0px 10px 0 0;
+}
+
+/* List tags */
+.tag-size-1 {
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.tag-size-2 {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.tag-size-3 {
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.tag-size-4 {
+  font-size: 19px;
+  text-decoration: none;
+}
+
+.tag-size-5 {
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.list.tags li {
+  display: column;
 }
 /*# sourceMappingURL=style.css.map */
