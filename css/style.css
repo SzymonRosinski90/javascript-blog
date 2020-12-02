@@ -102,40 +102,43 @@ body {
 .post-tags {
   display: -ms-flexbox;
   display: flex;
-  content: nbsp;
+  /* List tags */
 }
 
 .post-tags p {
   margin: 0px 10px 0 0;
 }
 
-/* List tags */
-.tag-size-1 {
+.post-tags posts, .post-tags data-tags {
+  margin-right: 5px;
+}
+
+.post-tags .tag-size-1 {
   font-size: 12px;
   text-decoration: none;
 }
 
-.tag-size-2 {
+.post-tags .tag-size-2 {
   font-size: 15px;
   text-decoration: none;
 }
 
-.tag-size-3 {
+.post-tags .tag-size-3 {
   font-size: 17px;
   text-decoration: none;
 }
 
-.tag-size-4 {
+.post-tags .tag-size-4 {
   font-size: 19px;
   text-decoration: none;
 }
 
-.tag-size-5 {
+.post-tags .tag-size-5 {
   font-size: 26px;
   text-decoration: none;
 }
 
-.list.tags li {
+.post-tags .list.tags li {
   display: column;
 }
 /*# sourceMappingURL=style.css.map */
